@@ -1,0 +1,1 @@
+Here goes your modules that will be automatically included in the app once referenced in **GFAF.Application.Core** library
