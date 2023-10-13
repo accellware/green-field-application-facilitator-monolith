@@ -3,7 +3,7 @@
 
 The tools are:
 1. Multi-tenant **web api** created in asp.net based on clean code and CQRS architectures
-2. Client side applications with best practices, technologies are:
+2. Client side applications with best practices, built in the following framework:
     - Blazor application
     - Vue 3 app
     - Angular app
