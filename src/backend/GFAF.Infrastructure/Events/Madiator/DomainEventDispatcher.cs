@@ -18,9 +18,19 @@ namespace GFAF.Infrastructure.Events.Madiator
             this.mediator = mediator;
         }
 
-        public Task DispatchAndClearEvents(IEnumerable<IAggregateRoot> entities)
+        public async Task DispatchAndClearEvents(IEnumerable<IAggregateRoot> entities)
         {
-            throw new NotImplementedException();
+            foreach (var entity in entities)
+            {
+                var events = entity.DomainEvents.ToArray();
+
+                entity.ClearDomainEvents();
+
+                foreach (var domainEvent in events)
+                {
+                    await mediator.Publish(domainEvent);
+                }
+            }
         }
     }
 }

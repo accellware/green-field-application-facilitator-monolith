@@ -17,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\GFAF.Application\GFAF.Application.Core.csproj" />
     <ProjectReference Include="..\GFAF.Infrastructure\GFAF.Infrastructure.csproj" />
+    <ProjectReference Include="..\GFAF.Persistence.Core\GFAF.Persistence.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

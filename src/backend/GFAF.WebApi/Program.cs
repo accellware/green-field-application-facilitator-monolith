@@ -1,5 +1,6 @@
 using GFAF.Application.Core.Extensions;
 using GFAF.Infrastructure.Core.Extensions;
+using GFAF.Persistence.Core.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,7 @@ builder.Services.AddSwaggerGen();
 // Add layers
 builder.Services.AddApplicationLayer();
 builder.Services.AddInfrastructureLayer();
+builder.Services.AddPersistenceLayer(builder.Configuration);
 
 var app = builder.Build();
 
